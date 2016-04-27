@@ -1,3 +1,11 @@
-* {
+/** {
 	background-color: blue;
+}*/
+
+.flash_alert {
+	color: red;
+}
+
+.flash_notice {
+	color: blue;
 }
