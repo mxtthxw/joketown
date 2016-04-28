@@ -35,6 +35,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.4)
     rack (1.6.4)
     rack-flash3 (1.0.5)
       rack
@@ -70,6 +71,7 @@ PLATFORMS
 
 DEPENDENCIES
   paperclip
+  pg
   rack-flash3
   rake
   sinatra-activerecord

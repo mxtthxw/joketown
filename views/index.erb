@@ -1,10 +1,14 @@
-<h1>HELLO WORLD</h1>
+<h1>J O K E T O W N</h1>
 
 <h1>New user? Sign up here:</h1>
 <form method="POST" action="/sign_up">
-	<label for="email">Email</label>
+	<label for="username">Choose Your Username </label>
+	<input type="text" name="[signup]username">
+	<!-- check if username is already used -->
+	<label for="email">Email </label>
 	<input type="email" name="[signup]email">
-	<label for="password">Password</label>
+	<!-- check if email is already used -->
+	<label for="password">Password </label>
 	<input type="password" name="[signup]password">
  <!-- add option to double-check password -->
 <!-- 	<label for="text">Confirm Password</label>
@@ -14,9 +18,9 @@
 
 <h1>Existing user? Sign in here:</h1>
 <form method="POST" action="/sign-in">
-	<label for="username">Username</label>
+	<label for="username">Username </label>
 	<input type="text" name="[login]username">
-	<label for="password">Password</label>
+	<label for="password">Password </label>
 	<input type="password" name="[login]password">
 	<input type="submit">
 </form>
