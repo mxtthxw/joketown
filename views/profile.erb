@@ -1,3 +1,9 @@
 <h1>Profile</h1>
-<h3>First Name: <%= @current_user.firstname %></h3>
-<h3>First Name: <%= current_user.firstname %></h3>
+<h3 class="username"><%= @user.username %></h3>
+<h3>First Name: <%= @user.firstname %></h3>
+<h3>Last Name: <%= @user.lastname %></h3>
+<h3>Age: <%= @user.age %></h3>
+<h3>Birthday: <%= @user.birthday %></h3>
+<h3>Email: <%= @user.email %></h3>
+
+<a href="newpost">Add a Joke</a>

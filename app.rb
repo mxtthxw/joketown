@@ -10,7 +10,6 @@ enable :sessions
 use Rack::Flash, :sweep => true
 
 configure(:development){set :database, "sqlite3:joketown.sqlite3"}
-# configure(:production){set :database, ""}
 set :sessions, true
 
 
@@ -27,36 +26,47 @@ get '/' do
 end
 
 get '/welcome' do
-	current_user
+	# @user = User.find(session[:user_id])
+	# current_user
 	erb :welcome
 end
 
 get '/landing' do
-	current_user
+	# @user = User.find(session[:user_id])
+	# current_user
 	erb :landing
 end
 
 get '/profile' do
-	current_user
+	@user = User.find(session[:user_id])
 	puts params.inspect
-	puts @current_user
+	puts @user.firstname
+	puts @user.inspect
+	puts User.find(26).inspect
+	# current_user
 	erb :profile
+end
+
+get '/newpost' do
+	erb :newpost
+end
+
+get '/posts/:id' do
+	@post = Post.find(params[:id])
+	erb :show_post
 end
 
 post '/sign_up' do
 	@user = User.create(params[:signup])
+	# conditionals to check if username and email are unique
+	session[:user_id] = @user.id
 	redirect "/welcome"
 end
 
 post '/newprofile' do
 	# puts params.inspect
-	@user = User.find(session[:user_id])
-	@user.firstname = params[:profile][:firstname]
-	@user.lastname = params[:profile][:lastname]
-	@user.age = params[:profile][:age]
-	@user.birthday = params[:profile][:birthday]
-	@user.username = params[:profile][:username]
-	# conditional to check if username is unique
+	@user = current_user
+	@user.update(firstname: params[:firstname], lastname: params[:lastname], age: params[:age], birthday: params[:birthday])
 	redirect '/profile'
 end
 
@@ -71,3 +81,9 @@ post '/sign-in' do
 	end
 	redirect "/"
 end
+
+post '/posts/create' do
+	@post = Post.create(params[:post])
+	redirect "/posts/#{post.id}"
+end
+

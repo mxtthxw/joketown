@@ -1,0 +1,18 @@
+<h1>Feeling hilarious? Post a new joke:</h1>
+
+<form method="POST" action="/newposting">
+	<label for="title">Title</label>
+	<input type="text" name="[post]title">
+	<br>
+	<label for="body">Last Name</label>
+	<input type="text" name="[post]body">
+	<br>
+	<!-- temporary -->
+	<label for="rating">Rating</label>
+	<input type="number" name="[post]rating">
+	<br>
+	<label for="explicit">Is your joke appropriate for all ages?</label>
+	<input type="radio" name="[post]explicit" value=false checked> Yes<br>
+  <input type="radio" name="[post]explicit" value=true> No<br>
+	<input type="submit">
+</form>
