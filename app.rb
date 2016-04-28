@@ -27,23 +27,24 @@ end
 
 get '/welcome' do
 	# @user = User.find(session[:user_id])
-	# current_user
+	current_user
 	erb :welcome
 end
 
 get '/landing' do
 	# @user = User.find(session[:user_id])
-	# current_user
+	current_user
+	puts @user.inspect
 	erb :landing
 end
 
 get '/profile' do
-	@user = User.find(session[:user_id])
+	current_user
+	# @user = User.find(session[:user_id])
 	puts params.inspect
 	puts @user.firstname
 	puts @user.inspect
 	puts User.find(26).inspect
-	# current_user
 	erb :profile
 end
 
@@ -51,9 +52,18 @@ get '/newpost' do
 	erb :newpost
 end
 
-get '/posts/:id' do
-	@post = Post.find(params[:id])
-	erb :show_post
+get '/feed' do
+	@posts = Post.all
+	erb :feed
+end
+
+get '/signout' do
+	current_user
+	# puts @user.inspect
+	# puts "========="
+	session.clear
+	# puts @user.inspect
+	redirect "/"
 end
 
 post '/sign_up' do
@@ -84,6 +94,10 @@ end
 
 post '/posts/create' do
 	@post = Post.create(params[:post])
-	redirect "/posts/#{post.id}"
+	redirect "/feed"
 end
 
+# get '/posts/:id' do
+# 	@post = Post.find(params[:id])
+# 	erb :feed
+# end

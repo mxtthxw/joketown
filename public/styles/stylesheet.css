@@ -10,8 +10,20 @@
 	color: blue;
 }
 
+.banner {
+	color: red;
+	font-size: 100px;
+	font-family: "Comic Sans MS";
+}
+
 .username {
 	color: red;
 	font-size: 50px;
-	font-family: "Comic Sans";
+	font-family: "Comic Sans MS";
+}
+
+.joke {
+	color: green;
+	font-size: 40px;
+	font-family: "Comic Sans MS";
 }
