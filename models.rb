@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
 	has_many :comments
 	has_many :follows, through: :user_follows
 	has_many :followers, through: :user_follows
+
+	def full_name
+		firstname + " " + lastname
+	end
 end
 
 class Post < ActiveRecord::Base

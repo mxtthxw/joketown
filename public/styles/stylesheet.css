@@ -11,9 +11,18 @@
 }
 
 .banner {
+	height: 200px;
+	width: 1100px;
+	margin-left: 30px;
+	margin-right: 30px;
+	background-color: white;
+}
+
+.joketown {
 	color: red;
 	font-size: 100px;
 	font-family: "Comic Sans MS";
+	text-align: center;
 }
 
 .username {
