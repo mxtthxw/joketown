@@ -20,8 +20,9 @@ def current_user
 end
 
 get '/' do
-	# current_user
+	current_user
 	# @users = User.all
+	puts @user.inspect
 	erb :index
 end
 
@@ -41,10 +42,10 @@ end
 get '/profile' do
 	current_user
 	# @user = User.find(session[:user_id])
-	puts params.inspect
-	puts @user.firstname
-	puts @user.inspect
-	puts User.find(26).inspect
+	# puts params.inspect
+	# puts @user.firstname
+	# puts @user.inspect
+	# puts User.find(26).inspect
 	erb :profile
 end
 
