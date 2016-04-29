@@ -78,7 +78,7 @@
 }
 
 #modal1 {
- 	display: none;
+ 	/*display: none;*/
 	width: 40vw;
 	height: 40vh;
 	margin: 0 auto;
@@ -97,8 +97,8 @@
 }
 
 #modal2 {
-	display: none;
-	width: 40vw;
+	/*display: none;
+*/	width: 40vw;
 	height: 40vh;
 	margin: 0 auto;
 	margin-top: 140px;
