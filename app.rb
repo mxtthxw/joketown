@@ -68,6 +68,13 @@ get '/signout' do
 	redirect "/"
 end
 
+get '/delete_account' do
+	current_user
+	session.clear
+	@current_user.destroy
+	redirect "/"
+end	
+
 post '/sign_up' do
 	@user = User.create(params[:signup])
 	# conditionals to check if username and email are unique
