@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427212611) do
+ActiveRecord::Schema.define(version: 20160428214222) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160427212611) do
     t.string  "tag"
     t.integer "rating"
     t.boolean "explicit"
+    t.integer "user_id"
   end
 
   create_table "tags", force: :cascade do |t|

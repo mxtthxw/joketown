@@ -1,0 +1,20 @@
+<h1>The Latest Jokes</h1>
+
+
+<!-- how to hardcode jokes -->
+
+<!-- <h3 class="joke"><%= @posts.last(10)[0][:body] %></h3>
+<h3>Tagged: <%= @posts.last.tag %></h3>
+<h3>Rating: <%= @posts.last.rating %></h3>
+<hr>
+<h3 class="joke"><%= @posts.last(10)[1][:body] %></h3>
+<h3>Tagged: <%= @posts.last.tag %></h3>
+<h3>Rating: <%= @posts.last.rating %></h3> -->
+
+<% @posts.last(10).reverse.each do |thing| %>
+<h3 class="joke">	<%= thing.body %> </h3>
+<h3 class="tag"> <%= thing.tag %> </h3>
+<h3 class="points">	<%= thing.rating %> </h3>
+<h3 class="jokeby"> <%= thing.user %> </h3>
+	<hr>
+<% end %>

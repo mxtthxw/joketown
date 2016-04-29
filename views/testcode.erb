@@ -1,0 +1,15 @@
+<!-- old, more complicated method -->
+
+<% def jokefeeder(x) %>
+<% jokefeed = @posts.last(x) %>
+<%	i = (x - 1) %>
+<%	while i >= 0 %>
+<h3 class="joke"> <%= jokefeed[i][:body] %> </h3>
+<h3 class="tag"> <%= jokefeed[i][:tag] %> </h3>
+<h3 class="points"> <%= jokefeed[i][:rating] %> </h3>
+	  <hr>
+	  <%	i -= 1 %>
+<%	end %>
+<% end %>
+
+<% jokefeeder(10) %>
