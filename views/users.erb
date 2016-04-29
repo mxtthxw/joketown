@@ -1,9 +1,9 @@
 <div class="userlist">
-<h1>Current Users</h1>
-<% @users.each do |user|%>
+<h1 class="page_heading">Current Users</h1>
+<% @users.reverse.each do |user|%>
 	<% if user.username == nil %>
 	<% else %>
- 		<%= user.username %>
+ 		<div class="username"><%= user.username %></div>
  		<br>
 	<% end %>
 <% end %>

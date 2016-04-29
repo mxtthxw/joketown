@@ -1,28 +1,42 @@
-<div id="modal1">
-	<h1>New user? Sign up here:</h1>
-	<form method="POST" action="/sign_up">
-		<label for="username">Choose Your Username </label>
-		<input type="text" name="[signup]username">
-		<!-- check if username is already used -->
-		<label for="email">Email </label>
-		<input type="email" name="[signup]email">
-		<!-- check if email is already used -->
-		<label for="password">Password </label>
-		<input type="password" name="[signup]password">
-		<!-- add option to double-check password -->
-		<!-- 	<label for="text">Confirm Password</label>
-		<input type="password" name="[signup]password2"> -->
-		<input type="submit">
-	</form>
+<div class="button_wrapper">
+	<div class="signup_button">
+		New User? Sign Up Here
+	</div>
+
+	<div class="signin_button">
+		Click Here To Sign In
+	</div>
 </div>
 
-<div id="modal2"
-	<h1>Existing user? Sign in here:</h1>
-	<form method="POST" action="/sign-in">
-		<label for="username">Username </label>
-		<input type="text" name="[login]username">
-		<label for="password">Password </label>
-		<input type="password" name="[login]password">
-		<input type="submit">
-	</form>
+<div class="modal_wrapper">
+
+	<div id="modal1">
+		<h1>New user? Sign up here:</h1>
+		<form method="POST" action="/sign_up">
+			<label for="username">Choose Your Username </label>
+			<input type="text" name="[signup]username">
+			<!-- check if username is already used -->
+			<label for="email">Email </label>
+			<input type="email" name="[signup]email">
+			<!-- check if email is already used -->
+			<label for="password">Password </label>
+			<input type="password" name="[signup]password">
+			<!-- add option to double-check password -->
+			<!-- 	<label for="text">Confirm Password</label>
+			<input type="password" name="[signup]password2"> -->
+			<input type="submit">
+		</form>
+	</div>
+
+	<div id="modal2">
+		<h1>Existing user? Sign in here:</h1>
+		<form method="POST" action="/sign-in">
+			<label for="username">Username </label>
+			<input type="text" name="[login]username">
+			<label for="password">Password </label>
+			<input type="password" name="[login]password">
+			<input type="submit">
+		</form>
+	</div>
+
 </div>

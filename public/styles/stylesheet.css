@@ -64,6 +64,35 @@
   font-weight: bold;
 }
 
+.page_heading {
+	font-family: "Comic Sans MS";
+	font-size: 40px;
+	font-color: red;
+}
+
+.button_wrapper {
+	width: 900px;
+	height: 100px;
+	margin-left: 175px;
+	margin-right: 175px;
+	margin-bottom: 20px;
+}
+
+.signup_button, .signin_button {
+	font-size: 35px;
+	font-family: "Comic Sans MS";
+	font-color: white;
+	background-color: black;
+	border: 10px solid orange;
+	box-shadow: 5px 5px 5px #888888;
+	float: left;
+	color: white;
+	border-radius: 10px;
+	margin: 10px;
+	margin-top: 0px;
+	padding: 10px;
+}
+
 .wrapper {
 	display: none;
 	width: 100%;
@@ -77,48 +106,57 @@
 	position: fixed;
 }
 
+.modalwrapper {
+	width: 40vw;
+	height: 40vh;
+}
+
 #modal1 {
  	/*display: none;*/
 	width: 40vw;
 	height: 40vh;
 	margin: 0 auto;
-	margin-top: 140px;
+	/*margin-top: 140px;*/
 	margin-bottom: 164px;
-	border: 10px solid #074E67;
-	font-size: 40px;
-	color: #fff;
+	border: 10px dotted black;
+	/*font-size: 40px;*/
 	text-align: center;
 	box-shadow: 5px 5px 5px #888888;
 	border-radius: 10px;
-	background-color: #000;
 	font-family: "Comic Sans MS";
 	z-index: 5;
-	position: relative;
+	/*position: fixed;*/
+	float: left;
 }
 
 #modal2 {
-	/*display: none;
-*/	width: 40vw;
+	/*display: none;*/
+	width: 40vw;
 	height: 40vh;
 	margin: 0 auto;
-	margin-top: 140px;
+	/*margin-top: 140px;*/
 	margin-bottom: 164px;
-	border: 10px solid #074E67;
-	font-size: 40px;
-	color: #fff;
+	border: 10px dotted black;
+	/*font-size: 40px;*/
 	text-align: center;
 	box-shadow: 5px 5px 5px #888888;
 	border-radius: 10px;
-	background-color: #000;
 	font-family: "Comic Sans MS";
 	z-index: 5;
-	position: relative;
+	/*position: fixed;*/
+	float: right;
 }
 
 .username {
 	color: red;
-	font-size: 50px;
+	font-size: 25px;
 	font-family: "Comic Sans MS";
+}
+
+.jokelist {
+	margin: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 .joke {

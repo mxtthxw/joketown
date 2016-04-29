@@ -51,6 +51,7 @@ get '/profile' do
 end
 
 get '/newpost' do
+	current_user
 	erb :newpost
 end
 
@@ -95,7 +96,8 @@ post '/newprofile' do
 	# puts params.inspect
 	@user = current_user
 	@user.update(firstname: params[:firstname], lastname: params[:lastname], age: params[:age], birthday: params[:birthday])
-	redirect '/profile'
+	# redirect '/profile'
+	redirect '/newpost'
 end
 
 post '/sign-in' do

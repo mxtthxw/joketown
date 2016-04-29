@@ -14,10 +14,10 @@ $(document).ready(function(){
 			$(".banner").css("background-color", newColor);
 		}, 3000)
 
-			$(".click-here").click(
+			$(".signup_button").click(
 		function(){
 	// function launchModal(){
-			$(".modal").fadeIn(500).css("display", "block");
+			$(".modal1").fadeIn(500).css("display", "block");
 			$(".wrapper").fadeIn(500).css("display", "block");
 			$(".wrapper").on("click", function(){
 				if(toggler == 2){
@@ -37,7 +37,7 @@ $(document).ready(function(){
 	);
 
 	function closeModal(){
-		$(".modal").fadeOut(500).css("display", "none");
+		$(".modal1").fadeOut(500).css("display", "none");
 		$(".wrapper").fadeOut(500).css("display", "none");
 		toggler = 1;
 	}
