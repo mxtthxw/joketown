@@ -1,0 +1,10 @@
+<div class="userlist">
+<h1>Current Users</h1>
+<% @users.each do |user|%>
+	<% if user.username == nil %>
+	<% else %>
+ 		<%= user.username %>
+ 		<br>
+	<% end %>
+<% end %>
+</div>

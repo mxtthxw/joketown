@@ -10,6 +10,10 @@
 	color: blue;
 }
 
+.signout {
+	float: right;
+}
+
 .banner {
 	height: 150px;
 	width: 1100px;
@@ -28,6 +32,36 @@
 	font-family: "Comic Sans MS";
 	text-align: center;
 	margin-top: 0px;
+}
+
+.navbar {
+	height: 50px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.navbuttons {
+	list-style-type: none;
+}
+
+.navbuttons li {
+	font-size: 25px;
+	font-family: "Comic Sans MS";
+	margin-left: 18px;
+	margin-right: 18px;
+	float: left;
+}
+
+.navbuttons a {
+	text-decoration: none;
+}
+
+/*fix buttons so hover doesn't move everything over*/
+.navbuttons a:hover, a:active {
+	text-decoration: none;
+  font-size: 27px;
+  color: red;
+  font-weight: bold;
 }
 
 .wrapper {
@@ -57,7 +91,7 @@
 	box-shadow: 5px 5px 5px #888888;
 	border-radius: 10px;
 	background-color: #000;
-	font-family: "Futura", sans-serif;
+	font-family: "Comic Sans MS";
 	z-index: 5;
 	position: relative;
 }
@@ -76,7 +110,7 @@
 	box-shadow: 5px 5px 5px #888888;
 	border-radius: 10px;
 	background-color: #000;
-	font-family: "Futura", sans-serif;
+	font-family: "Comic Sans MS";
 	z-index: 5;
 	position: relative;
 }
@@ -91,4 +125,15 @@
 	color: green;
 	font-size: 40px;
 	font-family: "Comic Sans MS";
+}
+
+.about {
+	color: red;
+	font-size: 25px;
+	font-family: "Comic Sans MS";
+	margin: 40px;
+}
+
+.about a:hover a:active {
+	color: none;
 }

@@ -59,6 +59,15 @@ get '/feed' do
 	erb :feed
 end
 
+get '/users' do
+	@users = User.all
+	erb :users
+end
+
+get '/about' do
+	erb :about
+end
+
 get '/signout' do
 	# current_user
 	# puts @user.inspect

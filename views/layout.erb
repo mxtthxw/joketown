@@ -8,14 +8,6 @@
 </head>
 <body>
 
-<a href="/signout"><button type="button" class="signout">Sign Out</button></a>
-
-<div class="wrapper"></div>
-
-<div class="banner">
-	<h1 class="joketown">J<span class="o">O</span>K<span class="o">E</span>T<span class="o">O</span>W<span class="o">N</span></h1>
-</div>
-
 <% if flash[:notice] %>
 	<div class="flash_notice">
 		<%=flash[:notice] %>
@@ -27,6 +19,24 @@
 		<%=flash[:alert] %>
 	</div>
 <% end %>
+
+<a href="/signout"><button type="button" class="signout">Sign Out</button></a>
+
+<div class="wrapper"></div>
+
+<div class="banner">
+	<h1 class="joketown">J<span class="o">O</span>K<span class="o">E</span>T<span class="o">O</span>W<span class="o">N</span></h1>
+</div>
+
+<div class="navbar">
+	<ul class="navbuttons">
+		<li><a href="/">Home</a></li>
+		<li><a href="feed">Today's Freshest Jokes</a></li>
+		<li><a href="newpost">Post A Joke</a></li>
+		<li><a href="users">Users</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+</div>
 
 <%= yield %>
 
