@@ -22,3 +22,13 @@
 	<input type="password" name="[login]password">
 	<input type="submit">
 </form>
+
+
+<h1>Current Users</h1>
+<% @users.each do |user|%>
+	<% if user.username == nil %>
+	<% else %>
+ <%= user.username %>
+ <br>
+	<% end %>
+<% end %>	

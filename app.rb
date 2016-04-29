@@ -23,6 +23,7 @@ get '/' do
 	current_user
 	# @users = User.all
 	puts @user.inspect
+	@users = User.all
 	erb :index
 end
 
@@ -59,7 +60,7 @@ get '/feed' do
 end
 
 get '/signout' do
-	current_user
+	# current_user
 	# puts @user.inspect
 	# puts "========="
 	session.clear
