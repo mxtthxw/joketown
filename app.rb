@@ -40,9 +40,9 @@ get '/landing' do
 	erb :landing
 end
 
-get '/profile' do
+get '/users/:id' do
 	current_user
-	# @user = User.find(session[:user_id])
+	@user = User.find(params[:id])
 	# puts params.inspect
 	# puts @user.firstname
 	# puts @user.inspect
@@ -56,16 +56,19 @@ get '/newpost' do
 end
 
 get '/feed' do
+	current_user
 	@posts = Post.all
 	erb :feed
 end
 
 get '/users' do
+	current_user
 	@users = User.all
 	erb :users
 end
 
 get '/about' do
+	current_user
 	erb :about
 end
 

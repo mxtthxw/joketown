@@ -20,7 +20,10 @@
 	</div>
 <% end %>
 
-<a href="/signout"><button type="button" class="signout">Sign Out</button></a>
+<% if @current_user %>
+	Welcome, <%= @current_user.username %>!
+	<a href="/signout"><button type="button" class="signout">Sign Out</button></a>
+<% end %>
 
 <div class="wrapper"></div>
 

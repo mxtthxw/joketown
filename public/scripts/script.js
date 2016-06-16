@@ -14,16 +14,15 @@ $(document).ready(function(){
 			$(".banner").css("background-color", newColor);
 		}, 3000)
 
-			$(".signup_button").click(
-		function(){
-	// function launchModal(){
-			$(".modal1").fadeIn(500).css("display", "block");
-			$(".wrapper").fadeIn(500).css("display", "block");
-			$(".wrapper").on("click", function(){
-				if(toggler == 2){
-					closeModal();
-				}
-			});
+	// 	$(".signup_button").click(function(){
+	// // function launchModal(){
+	// 		$(".modal1").fadeIn(500).css("display", "block");
+	// 		$(".wrapper").fadeIn(500).css("display", "block");
+	// 		$(".wrapper").on("click", function(){
+	// 			if(toggler == 2){
+	// 				closeModal();
+	// 			}
+	// 		});
 			///////////
 			// $(".modal").on("click", function(){
 			// 	if(bob == 2){
