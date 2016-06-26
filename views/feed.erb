@@ -13,10 +13,13 @@
 
 <div class="jokelist">
 <% @posts.last(10).reverse.each do |thing| %>
-<h3 class="joke">	<%= thing.body %> </h3>
-<h3 class="tag"> <%= thing.tag %> </h3>
-<h3 class="points">	<%= thing.rating %> </h3>
-<h3 class="jokeby"> <%= thing.user %> </h3>
+<h3 class="joke"><a href="/posts/<%= thing.id %>">	<%= thing.body %> </a></h3>
+<h3 class="tag">Tags: <%= thing.tag %> </h3>
+<h3 class="points">Rating: <%= thing.rating %> </h3>
+<% if thing.user %>
+	<h3 class="jokeby">By: <a href="/users/<%= thing.user.id %>"><%= thing.user.username %></a></h3>
+<% else %>
+<% end %>
 	<hr>
 <% end %>
 </div>

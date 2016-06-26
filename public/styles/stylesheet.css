@@ -22,6 +22,10 @@
 	border: 10px dotted black;
 }
 
+.banner a {
+	text-decoration: none;
+}
+
 .o {
 	font-size: 85px;
 }
@@ -70,7 +74,7 @@
 	font-color: red;
 }
 
-.button_wrapper {
+.button-wrapper {
 	width: 900px;
 	height: 100px;
 	margin-left: 175px;
@@ -78,7 +82,7 @@
 	margin-bottom: 20px;
 }
 
-.signup_button, .signin_button {
+.signup-button, .signin-button {
 	font-size: 35px;
 	font-family: "Comic Sans MS";
 	font-color: white;
@@ -106,13 +110,13 @@
 	position: fixed;
 }
 
-.modalwrapper {
+/*.modal-wrapper {
 	width: 40vw;
 	height: 40vh;
-}
+}*/
 
 #modal1 {
- 	/*display: none;*/
+ 	display: none;
 	width: 40vw;
 	height: 40vh;
 	margin: 0 auto;
@@ -130,7 +134,7 @@
 }
 
 #modal2 {
-	/*display: none;*/
+	display: none;
 	width: 40vw;
 	height: 40vh;
 	margin: 0 auto;
@@ -153,6 +157,11 @@
 	font-family: "Comic Sans MS";
 }
 
+.username a {
+	text-decoration: none;
+	color: red;
+}
+
 .jokelist {
 	margin: 30px;
 	margin-left: 50px;
@@ -163,6 +172,11 @@
 	color: green;
 	font-size: 40px;
 	font-family: "Comic Sans MS";
+}
+
+.joke a {
+	color: green;
+	text-decoration: none;
 }
 
 .about {

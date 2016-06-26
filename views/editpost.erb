@@ -1,0 +1,19 @@
+<form method="POST" action="/posts/update/<%= @post.id %>">
+	<label for="body">Joke</label>
+	<input type="text" name="[post]body" value="<%= @post.body %>">
+	<br>
+	<label for="title">Tags</label>
+	<input type="text" name="[post]tag" value="<%= @post.tag %>">
+	<br>
+	<label for="explicit">Is your joke appropriate for all ages?</label>
+	<% if @post.explicit == false %>
+		<input type="radio" name="[post]explicit" value=false checked> Yes
+	  <input type="radio" name="[post]explicit" value=true> No<br>
+  <% else %>
+	  <input type="radio" name="[post]explicit" value=false> Yes
+	  <input type="radio" name="[post]explicit" value=true checked> No<br>
+  <% end %>
+  <input type="hidden" value="<%= current_user.id %>" name="[post]user_id">
+  <input type="hidden" value="<%= @post.rating %>" name="[post]rating">
+	<input type="submit">
+</form>

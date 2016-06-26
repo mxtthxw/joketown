@@ -50,6 +50,18 @@ get '/users/:id' do
 	erb :profile
 end
 
+get '/posts/:id' do
+	current_user
+	@post = Post.find(params[:id])
+	erb :post
+end
+
+get '/editpost/:id' do
+	current_user
+	@post = Post.find(params[:id])
+	erb :editpost
+end
+
 get '/newpost' do
 	current_user
 	erb :newpost
@@ -78,21 +90,32 @@ get '/signout' do
 	# puts "========="
 	session.clear
 	# puts @user.inspect
-	redirect "/"
+	redirect '/'
 end
 
 get '/delete_account' do
 	current_user
 	session.clear
 	@current_user.destroy
-	redirect "/"
+	redirect '/'
 end	
+
+# delete '/delete_post' do
+# 	# @post = Post.find(params[:id])
+# 	# @post.destroy
+# 	redirect '/feed'
+# end
+
+delete '/posts/:id' do
+  @post = Post.delete(params[:id])
+  redirect '/feed'
+end
 
 post '/sign_up' do
 	@user = User.create(params[:signup])
 	# conditionals to check if username and email are unique
 	session[:user_id] = @user.id
-	redirect "/welcome"
+	redirect '/welcome'
 end
 
 post '/newprofile' do
@@ -118,6 +141,15 @@ end
 post '/posts/create' do
 	@post = Post.create(params[:post])
 	redirect "/feed"
+end
+
+post '/posts/update/:id' do
+	@post = Post.find(params[:id])
+	@post.update(params[:post])
+	# redirect '/posts/:id'
+	# redirect to ('posts/:id')
+	# erb '../@post.id'
+	redirect '/feed'
 end
 
 # get '/posts/:id' do

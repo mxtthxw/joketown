@@ -3,7 +3,7 @@
 <% @users.reverse.each do |user|%>
 	<% if user.username == nil %>
 	<% else %>
- 		<div class="username"><%= user.username %></div>
+ 		<div class="username"><a href="/users/<%= user.id %>"><%= user.username %></a></div>
  		<br>
 	<% end %>
 <% end %>

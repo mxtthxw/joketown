@@ -6,6 +6,15 @@
 <h3>Birthday: <%= @user.birthday %></h3>
 <h3>Email: <%= @user.email %></h3>
 
-<a href="welcome">Edit Profile</a>
-<a href="newpost">Add a Joke</a>
+<% if current_user.id == @user.id %>
+	<a href="welcome">Edit Profile</a><br>
+<% else %>
+<% end %>
+<a href="newpost">Add a Joke</a><br>
 <a href="feed">See the Latest Jokes</a>
+
+<% if Dir.exists?('user') %>
+	Hi
+	<% else %>
+	NO
+	<% end %>

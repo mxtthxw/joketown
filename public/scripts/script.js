@@ -35,11 +35,21 @@ $(document).ready(function(){
 		}
 	);
 
-	function closeModal(){
-		$(".modal1").fadeOut(500).css("display", "none");
-		$(".wrapper").fadeOut(500).css("display", "none");
-		toggler = 1;
-	}
+	$(".signup-button").on("click", function(){
+		$("#modal1").show();
+		$("#modal2").hide();
+	})	
+
+	$(".signin-button").on("click", function(){
+		$("#modal2").show();
+		$("#modal1").hide();
+	})
+
+	// function closeModal(){
+	// 	$(".modal1").fadeOut(500).css("display", "none");
+	// 	$(".wrapper").fadeOut(500).css("display", "none");
+	// 	toggler = 1;
+	// }
 
 		// setInterval(function(){
 		// 	$(".o").css("font-size", 110);
@@ -49,6 +59,5 @@ $(document).ready(function(){
 		// 	$(".o").css("font-size", 100);
 		// }, 400)
 
-	});
 
 });

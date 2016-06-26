@@ -10,9 +10,7 @@
 	<label for="explicit">Is your joke appropriate for all ages?</label>
 	<input type="radio" name="[post]explicit" value=false checked> Yes
   <input type="radio" name="[post]explicit" value=true> No<br>
-  <input type="hidden" value=
-  <%= current_user.id %> 
-  name="[post]user_id">
+  <input type="hidden" value="<%= current_user.id %>" name="[post]user_id">
   <input type="hidden" value=0 name="[post]rating">
 	<input type="submit">
 </form>

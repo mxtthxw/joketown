@@ -3,8 +3,11 @@
 <head>
 	<title>Welcome to Joketown!</title>
 	<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="../styles/stylesheet.css">
 	<script src="scripts/jquery-2.2.3.js"></script>
+	<script src="../scripts/jquery-2.2.3.js"></script>
 	<script src="scripts/script.js"></script>
+	<script src="../scripts/script.js"></script>
 </head>
 <body>
 
@@ -21,24 +24,42 @@
 <% end %>
 
 <% if @current_user %>
-	Welcome, <%= @current_user.username %>!
+	Welcome, <a href="/users/<%= @current_user.id %>"><%= @current_user.username %></a>!
 	<a href="/signout"><button type="button" class="signout">Sign Out</button></a>
 <% end %>
 
 <div class="wrapper"></div>
 
 <div class="banner">
-	<h1 class="joketown">J<span class="o">O</span>K<span class="o">E</span>T<span class="o">O</span>W<span class="o">N</span></h1>
+	<a href="/">
+		<h1 class="joketown">J<span class="o">O</span>K<span class="o">E</span>T<span class="o">O</span>W<span class="o">N</span></h1>
+	</a>
 </div>
 
 <div class="navbar">
 	<ul class="navbuttons">
 		<li><a href="/">Home</a></li>
-		<li><a href="feed">Today's Freshest Jokes</a></li>
-		<li><a href="newpost">Post A Joke</a></li>
+		<% if Dir.exists?('feed') %>
+			<li><a href="feed">Today's Freshest Jokes</a></li>
+		<% else %>
+			<li><a href="../feed">Today's Freshest Jokes</a></li>
+		<% end %>
+		<% if Dir.exists?('newpost') %>
+			<li><a href="newpost">Post A Joke</a></li>
+		<% else %>
+			<li><a href="../newpost">Post A Joke</a></li>
+		<% end %>
 		<!-- <li><a href="profile">Your Profile</a></li> -->
-		<li><a href="users">Users</a></li>
-		<li><a href="about">About</a></li>
+		<% if Dir.exists?('user') %>
+			<li><a href="users">Users</a></li>
+		<% else %>
+			<li><a href="../users">Users</a></li>
+		<% end %>
+		<% if Dir.exists?('about') %>
+			<li><a href="about">About</a></li>
+		<% else %>
+			<li><a href="../about">About</a></li>
+		<% end %>
 	</ul>
 </div>
 
